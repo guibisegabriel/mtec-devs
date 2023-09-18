@@ -1,11 +1,19 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace MtecDevs.Models;
 
 
 public class Usuario
 {
+
+    [Key]
+    public string UserId {get; set;}
+    [ForeignKey("UserId")]
+    public IdentityUser AccountUser {get; set;}
+
+
     [Required(ErrorMessage ="Informe o Nome")] 
     [StringLength(30,ErrorMessage = "O nome deve possuir no máximo 30 caracteres")]
     public string Nome {get; set;}
