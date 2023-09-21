@@ -12,6 +12,12 @@ public class AppDbContext : IdentityDbContext
 
     public DbSet<Usuario> Usuarios { get; set; } 
     public DbSet<TipoDev> TipoDevs { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+    }
+    
 }
 
 
