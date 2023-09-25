@@ -18,3 +18,14 @@ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6
 Usuários  - Devs/Admin/Prof
     Dados básicos: Nome, Data nascimento, Foto, TipoDev
 TipoDev - Front/Back/Full/UX-UI/Design/
+ 
+criar a migração
+//testar se tem ferramenta de migração
+dotnet ef
+
+//instalar no PC
+dotnet tool install --global dotnet -ef
+
+// Comandos para criar e aplicar as migrações
+dotnet ef migrations add criar-banco
+dotnet ef database update
