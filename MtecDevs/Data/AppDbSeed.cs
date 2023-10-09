@@ -74,12 +74,8 @@ public class AppDbSeed
                 LockoutEnabled = true,
             }
         };
-        builder.Entity<IdentityUser>().HasData(users);
-        #endregion
-        
-        //criptografar a senha do IdentityUser
-        #region 
-        foreach (var user in users)
+         //criptografar a senha do IdentityUser
+         foreach (var user in users)
         {
             PasswordHasher<IdentityUser> password = new();
             user.PasswordHash = password.HashPassword(user, "@Etec123");

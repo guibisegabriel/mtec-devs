@@ -24,7 +24,7 @@ criar a migração
 dotnet ef
 
 //instalar no PC
-dotnet tool install --global dotnet -ef
+dotnet tool install --global dotnet-ef
 
 // Comandos para criar e aplicar as migrações
 dotnet ef migrations add criar-banco
