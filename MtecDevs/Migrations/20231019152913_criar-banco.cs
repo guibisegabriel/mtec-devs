@@ -244,15 +244,15 @@ namespace MtecDevs.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "0100501e-9b70-44ba-a0a8-75f68ca18bbd", "45720ab1-38fc-4bcd-b6e3-58a77118e78c", "Moderador", "MODERADOR" },
-                    { "41d40dac-1351-4471-b00e-e125a4fdc711", "4d24dc66-c2e6-410f-bc78-8c9e554f6e07", "Usuário", "USUÁRIO" },
-                    { "f75c3db8-991d-4691-8706-8247b16cc935", "ae9ec959-1396-4603-8d74-b74fa3e7a751", "Administrador", "ADMINISTRADOR" }
+                    { "00e3e058-c6a2-418d-83ac-595cc3d29c55", "5053dccc-f7b7-4c42-bfa3-358abd42ef08", "Usuário", "USUÁRIO" },
+                    { "95b08abd-38e8-4eda-b1d4-8e2526085fc2", "9d7ee33e-9b79-4a5f-a183-b1f12056f856", "Moderador", "MODERADOR" },
+                    { "f7d549b9-05a4-4266-ab10-453accb54398", "ce33249f-96da-468d-8d4f-d70f0bcc6de5", "Administrador", "ADMINISTRADOR" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "c9dcb37d-88a0-4bf0-874c-65f65525cc49", 0, "e006745a-3e72-4871-934a-3b52dc1c3389", "guilherme19.b07@gmail.com", true, true, null, "GUILHERME19.B07@GMAIL.COM", "GUILHERME BISPO", "AQAAAAEAACcQAAAAEIBhgSHfQoWbL+lEBGYBca3kzA52JJwBDutFfDoB3+GLrZo9vpMpvW97vXgv/Vs8sg==", null, false, "6131ed05-1fdc-401d-a463-3f2bf30489b1", false, "Guilherme Bispo" });
+                values: new object[] { "d1feee92-3478-4c10-ac4e-1a9e8873d365", 0, "e994e0cb-bbe5-4938-a530-38ba9f535ae6", "guilherme19.b07@gmail.com", true, true, null, "GUILHERME19.B07@GMAIL.COM", "GUILHERME BISPO", "AQAAAAEAACcQAAAAEJwDjQvqeaxKTA6i+tZb42E7LblhBtOx5U/L9q7DiWdkr2Ji3bI9VLn2azrpAeUOAw==", null, false, "d502c8fe-ff47-4139-a60b-566736b50333", false, "Guilherme Bispo" });
 
             migrationBuilder.InsertData(
                 table: "TipoDev",
@@ -269,7 +269,7 @@ namespace MtecDevs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "f75c3db8-991d-4691-8706-8247b16cc935", "c9dcb37d-88a0-4bf0-874c-65f65525cc49" });
+                values: new object[] { "f7d549b9-05a4-4266-ab10-453accb54398", "d1feee92-3478-4c10-ac4e-1a9e8873d365" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

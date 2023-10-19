@@ -47,22 +47,22 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f75c3db8-991d-4691-8706-8247b16cc935",
-                            ConcurrencyStamp = "ae9ec959-1396-4603-8d74-b74fa3e7a751",
+                            Id = "f7d549b9-05a4-4266-ab10-453accb54398",
+                            ConcurrencyStamp = "ce33249f-96da-468d-8d4f-d70f0bcc6de5",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "0100501e-9b70-44ba-a0a8-75f68ca18bbd",
-                            ConcurrencyStamp = "45720ab1-38fc-4bcd-b6e3-58a77118e78c",
+                            Id = "95b08abd-38e8-4eda-b1d4-8e2526085fc2",
+                            ConcurrencyStamp = "9d7ee33e-9b79-4a5f-a183-b1f12056f856",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "41d40dac-1351-4471-b00e-e125a4fdc711",
-                            ConcurrencyStamp = "4d24dc66-c2e6-410f-bc78-8c9e554f6e07",
+                            Id = "00e3e058-c6a2-418d-83ac-595cc3d29c55",
+                            ConcurrencyStamp = "5053dccc-f7b7-4c42-bfa3-358abd42ef08",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
                         });
@@ -157,17 +157,17 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c9dcb37d-88a0-4bf0-874c-65f65525cc49",
+                            Id = "d1feee92-3478-4c10-ac4e-1a9e8873d365",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e006745a-3e72-4871-934a-3b52dc1c3389",
+                            ConcurrencyStamp = "e994e0cb-bbe5-4938-a530-38ba9f535ae6",
                             Email = "guilherme19.b07@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "GUILHERME19.B07@GMAIL.COM",
                             NormalizedUserName = "GUILHERME BISPO",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIBhgSHfQoWbL+lEBGYBca3kzA52JJwBDutFfDoB3+GLrZo9vpMpvW97vXgv/Vs8sg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJwDjQvqeaxKTA6i+tZb42E7LblhBtOx5U/L9q7DiWdkr2Ji3bI9VLn2azrpAeUOAw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6131ed05-1fdc-401d-a463-3f2bf30489b1",
+                            SecurityStamp = "d502c8fe-ff47-4139-a60b-566736b50333",
                             TwoFactorEnabled = false,
                             UserName = "Guilherme Bispo"
                         });
@@ -235,8 +235,8 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "c9dcb37d-88a0-4bf0-874c-65f65525cc49",
-                            RoleId = "f75c3db8-991d-4691-8706-8247b16cc935"
+                            UserId = "d1feee92-3478-4c10-ac4e-1a9e8873d365",
+                            RoleId = "f7d549b9-05a4-4266-ab10-453accb54398"
                         });
                 });
 
