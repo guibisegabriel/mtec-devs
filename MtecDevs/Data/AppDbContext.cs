@@ -6,11 +6,11 @@ namespace MtecDevs.Data;
 
 public class AppDbContext : IdentityDbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> opcoes) : base(opcoes)
+    public AppDbContext(DbContextOptions opcoes) : base(opcoes)
     {
     }
 
-    public DbSet<Usuario> Usuarios { get; set; } 
+    public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<TipoDev> TipoDevs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -18,10 +18,8 @@ public class AppDbContext : IdentityDbContext
         base.OnModelCreating(builder);
         AppDbSeed seed = new(builder);
     }
-    
+
 }
-
-
 
     
     

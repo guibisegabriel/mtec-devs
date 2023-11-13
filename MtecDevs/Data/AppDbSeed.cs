@@ -1,17 +1,14 @@
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MtecDevs.Models;
-namespace MtecDevs.Data;
 
-public class NewBaseType
-{
-}
+namespace MtecDevs.Data;
 
 public class AppDbSeed
 {
     public AppDbSeed(ModelBuilder builder)
     {
-        // Popular dos dados de Tipos de Dev
         #region Popular dados TipoDev
         List<TipoDev> tipoDevs = new() {
             new TipoDev() {
@@ -37,69 +34,64 @@ public class AppDbSeed
         };
         builder.Entity<TipoDev>().HasData(tipoDevs);
         #endregion
-    
-        // Popular dados do perfil dos usuarios
+
         #region Popular dados Perfis de Usuário
         List<IdentityRole> perfis = new() {
             new IdentityRole() {
                 Id = Guid.NewGuid().ToString(),
                 Name = "Administrador",
-                NormalizedName = "ADMINISTRADOR",
+                NormalizedName = "ADMINISTRADOR"
             },
             new IdentityRole() {
                 Id = Guid.NewGuid().ToString(),
                 Name = "Moderador",
-                NormalizedName = "MODERADOR",
+                NormalizedName = "MODERADOR"
             },
             new IdentityRole() {
                 Id = Guid.NewGuid().ToString(),
                 Name = "Usuário",
-                NormalizedName = "USUÁRIO",
-            } 
+                NormalizedName = "USUÁRIO"
+            }
         };
-        builder.Entity<IdentityRole>().HasData(perfis);    
+        builder.Entity<IdentityRole>().HasData(perfis);
         #endregion
-    
-        //Popular dados de Usuario
-        #region Popular dados de Usuário
-        //lista de IdentityUser
+
+        #region Popular Dados de Usuário
+        // Lista de IdentityUser
         List<IdentityUser> users = new() {
             new IdentityUser() {
                 Id = Guid.NewGuid().ToString(),
-                UserName = "Guilherme Bispo",
-                NormalizedUserName = "GUILHERME BISPO",
-                Email = "guilherme19.b07@gmail.com",
-                NormalizedEmail = "GUILHERME19.B07@GMAIL.COM",
+                UserName = "GalloJunior",
+                NormalizedUserName = "GALLOJUNIOR",
+                Email = "gallojunior@gmail.com",
+                NormalizedEmail = "GALLOJUNIOR@GMAIL.COM",
                 EmailConfirmed = true,
-                LockoutEnabled = true,
+                LockoutEnabled = true
             }
         };
-         //criptografar a senha do IdentityUser
-         foreach (var user in users)
+        // Criptografar a senha do IdentityUser
+        foreach (var user in users)
         {
             PasswordHasher<IdentityUser> password = new();
             user.PasswordHash = password.HashPassword(user, "@Etec123");
         }
         builder.Entity<IdentityUser>().HasData(users);
-        #endregion
-
-        //criar o usuario
-        #region Criação de usuário
-        List<Usuario> usuarios = new();{
-            Usuario usuario = new Usuario() {
+        
+        // Cria o usuário
+        List<Usuario> usuarios = new(){
+            new Usuario() {
                 UserId = users[0].Id,
-                Nome = "Guilherme Bispo",
-                DataNascimento = DateTime.Parse("19/09/2006"),
-                TipoDevId = 3
-            };
+                Nome = "José Antonio Gallo Junior",
+                DataNascimento = DateTime.Parse("05/08/1981"),
+                Foto = "/img/usuarios/avatar.png",
+                TipoDevId = 1
+            }
         };
         builder.Entity<Usuario>().HasData(usuarios);
-        #endregion
-        
-        //Definir o perfil do Usuario Criado
-        #region Definir perfil do Usuario
-        List<IdentityUserRole<string>> userRoles = new(){
-            new IdentityUserRole<string>(){
+
+        // Definir o perfil do usuário criado
+        List<IdentityUserRole<string>> userRoles = new() {
+            new IdentityUserRole<string>() {
                 UserId = users[0].Id,
                 RoleId = perfis[0].Id
             }
